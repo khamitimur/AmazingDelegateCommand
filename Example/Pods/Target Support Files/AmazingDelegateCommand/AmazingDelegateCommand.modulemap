@@ -1,0 +1,6 @@
+framework module AmazingDelegateCommand {
+  umbrella header "AmazingDelegateCommand-umbrella.h"
+
+  export *
+  module * { export * }
+}

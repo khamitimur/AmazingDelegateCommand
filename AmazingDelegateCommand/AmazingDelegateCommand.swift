@@ -52,9 +52,63 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
         }
         
         guard let parameter = parameter as? T else {
+            // Или true?
             return false
         }
         
         return canExecuteAction(target)(parameter)
+    }
+    
+    private weak var delegate: AmazingDelegateCommandDelegate?
+    
+    public func addDelegate(_ delegate: AmazingDelegateCommandDelegate) {
+        self.delegate = delegate
+    }
+    
+    // MARK: - Public Methods
+    
+    public func raiseCanExecuteDidChange() {
+        delegate?.canExecuteDidChange()
+    }
+}
+
+import UIKit
+
+public class AmazingDelegateCommandButton: UIButton, AmazingDelegateCommandDelegate {
+    
+    // MARK: - Properties
+    
+    public var command: IAmazingDelegateCommand? {
+        didSet {
+            addOrRemoveTarget()
+            canExecuteDidChange()
+        }
+    }
+    
+    public var commandParameter: Any = () {
+        didSet {
+            canExecuteDidChange()
+        }
+    }
+    
+    private func addOrRemoveTarget() {
+        if let command = command {
+            command.addDelegate(self)
+            
+            addTarget(self, action: #selector(handleTap), for: .touchUpInside)
+        } else {
+            removeTarget(self, action: #selector(handleTap), for: .touchUpInside)
+        }
+    }
+    
+    @objc
+    private func handleTap() {
+        command?.execute(commandParameter)
+    }
+    
+    // MARK: - AmazingDelegateCommandDelegate
+    
+    public func canExecuteDidChange() {
+        isEnabled = command?.canExecute(commandParameter) ?? true
     }
 }

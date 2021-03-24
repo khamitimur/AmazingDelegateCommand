@@ -52,9 +52,9 @@
 		F5E85AB0260AF91400038FFA /* AmazingDelegateCommand */ = {
 			isa = PBXGroup;
 			children = (
+				F5E85AD8260AFAC000038FFA /* Extensions */,
 				F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */,
 				F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */,
-				F5E85AD8260AFAC000038FFA /* Extensions */,
 				F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */,
 				F5E85AB2260AF91400038FFA /* Info.plist */,
 			);
