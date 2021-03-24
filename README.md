@@ -5,3 +5,4 @@ TODO:
 - [ ] Add canExecuteDidChange notification
 - [ ] Add sample project
 - [ ] Add UIButton integration
+- [ ] Add documentation
