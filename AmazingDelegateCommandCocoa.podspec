@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AmazingDelegateCommandCocoa"
-  spec.version      = "1.0.0"
+  spec.version      = "0.0.1"
   spec.summary      = "Delegate command for Swift applied. That's it."
 
   spec.homepage     = "https://github.com/khamitimur/AmazingCommands"
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "AmazingDelegateCommandCocoa/**/*.swift"
   
-  s.dependency 'AmazingDelegateCommand', '1.0.0'
+  spec.dependency 'AmazingDelegateCommand', '0.0.1'
   
   spec.swift_versions = ['5.0']
 

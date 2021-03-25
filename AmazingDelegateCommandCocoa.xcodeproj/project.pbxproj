@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F5E868D5260C461800038FFA /* AmazingDelegateCommandCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5E868E4260C4AE900038FFA /* AmazingDelegateCommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E868E3260C4AE900038FFA /* AmazingDelegateCommandButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5E868D0260C461800038FFA /* AmazingDelegateCommandCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingDelegateCommandCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazingDelegateCommandCocoa.h; sourceTree = "<group>"; };
 		F5E868D4260C461800038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E868E3260C4AE900038FFA /* AmazingDelegateCommandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		F5E868D2260C461800038FFA /* AmazingDelegateCommandCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				F5E868E3260C4AE900038FFA /* AmazingDelegateCommandButton.swift */,
 				F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */,
 				F5E868D4260C461800038FFA /* Info.plist */,
 			);
@@ -94,6 +97,7 @@
 				TargetAttributes = {
 					F5E868CF260C461800038FFA = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E868E4260C4AE900038FFA /* AmazingDelegateCommandButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 		F5E868D9260C461800038FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -274,11 +280,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,6 +294,7 @@
 		F5E868DA260C461800038FFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -300,7 +308,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

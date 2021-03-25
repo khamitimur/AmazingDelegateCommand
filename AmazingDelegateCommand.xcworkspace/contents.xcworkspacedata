@@ -5,6 +5,6 @@
       location = "container:AmazingDelegateCommand.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AmazingDelegateCommandCocoa/AmazingDelegateCommandCocoa.xcodeproj">
+      location = "group:AmazingDelegateCommandCocoa.xcodeproj">
    </FileRef>
 </Workspace>
