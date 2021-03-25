@@ -1,9 +1,12 @@
 PODS:
   - AmazingDelegateCommand (0.0.1)
+  - AmazingDelegateCommandCocoa (0.0.1):
+    - AmazingDelegateCommand (= 0.0.1)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - AmazingDelegateCommand (from `../`)
+  - AmazingDelegateCommandCocoa (from `../`)
   - SnapKit (= 5.0.1)
 
 SPEC REPOS:
@@ -13,11 +16,14 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AmazingDelegateCommand:
     :path: "../"
+  AmazingDelegateCommandCocoa:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AmazingDelegateCommand: 2522ecdfe90757381005e397b62f7c8763cb1c0e
+  AmazingDelegateCommandCocoa: 03260faffa15e6670072286a925c0805dc858bc4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 0d605d149b44377ab3156f7b295c83d20a502d34
+PODFILE CHECKSUM: 478505ff4159ab0d2dc5be34cbcaf76eee39f70d
 
 COCOAPODS: 1.10.1

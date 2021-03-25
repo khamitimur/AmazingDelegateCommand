@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import AmazingDelegateCommand
+import AmazingDelegateCommandCocoa
 
 class StringWrapper {
     var string: String = ""
@@ -55,6 +56,7 @@ final class MainViewController: UIViewController {
         button.backgroundColor = .systemGreen
         
         button.command = enablePrintCommand
+        button.commandParameter = 4
         
         return button
     }()
@@ -87,7 +89,7 @@ final class MainViewController: UIViewController {
     private var canExecutePrintCommand = true
     
     private var printCommand: AmazingDelegateCommand<MainViewController, StringWrapper>!
-    private var enablePrintCommand: AmazingDelegateCommand<MainViewController, Void>!
+    private var enablePrintCommand: AmazingDelegateCommand<MainViewController, Int?>!
     private var disablePrintCommand: AmazingDelegateCommand<MainViewController, Void>!
     private var changePrintCommand: AmazingDelegateCommand<MainViewController, String>!
     
@@ -140,7 +142,7 @@ final class MainViewController: UIViewController {
         canExecutePrintCommand
     }
     
-    private func enablePrintCommamdExecute(_: ()) {
+    private func enablePrintCommamdExecute(_ parameter: Int?) {
         canExecutePrintCommand = true
         
         printCommand.raiseCanExecuteDidChange()

@@ -6,6 +6,7 @@ target 'AmazingDelegateCommandExample' do
   project 'AmazingDelegateCommandExample.xcodeproj'
   
   pod 'AmazingDelegateCommand', :path => '../'
+  pod 'AmazingDelegateCommandCocoa', :path => '../'
   
   pod 'SnapKit', '5.0.1'
 end

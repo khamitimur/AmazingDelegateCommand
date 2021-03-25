@@ -3,25 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F5E85AB3260AF91400038FFA /* AmazingDelegateCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5E85ADB260AFAC000038FFA /* AmazingDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */; };
-		F5E85ADC260AFAC000038FFA /* AmazingDelegateCommand+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */; };
 		F5E85ADD260AFAC000038FFA /* IAmazingDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */; };
 		F5E868DF260C4A4300038FFA /* AmazingDelegateCommandDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E868DE260C4A4300038FFA /* AmazingDelegateCommandDelegate.swift */; };
+		F5E868F0260C4C7C00038FFA /* AmazingDelegateCommandExecuteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E868EF260C4C7C00038FFA /* AmazingDelegateCommandExecuteTests.swift */; };
+		F5E868F2260C4C7C00038FFA /* AmazingDelegateCommand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */; platformFilter = ios; };
+		F5E86901260C4D5D00038FFA /* AmazingDelegateCommandTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E86900260C4D5D00038FFA /* AmazingDelegateCommandTarget.swift */; };
+		F5E86905260C4E4A00038FFA /* AmazingDelegateCommandParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E86904260C4E4A00038FFA /* AmazingDelegateCommandParameter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5E868F3260C4C7C00038FFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5E85AA5260AF91400038FFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5E85AAD260AF91400038FFA;
+			remoteInfo = AmazingDelegateCommand;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingDelegateCommand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazingDelegateCommand.h; sourceTree = "<group>"; };
 		F5E85AB2260AF91400038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommand.swift; sourceTree = "<group>"; };
-		F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AmazingDelegateCommand+Void.swift"; sourceTree = "<group>"; };
 		F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAmazingDelegateCommand.swift; sourceTree = "<group>"; };
 		F5E868DE260C4A4300038FFA /* AmazingDelegateCommandDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandDelegate.swift; sourceTree = "<group>"; };
+		F5E868ED260C4C7C00038FFA /* AmazingDelegateCommandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmazingDelegateCommandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E868EF260C4C7C00038FFA /* AmazingDelegateCommandExecuteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandExecuteTests.swift; sourceTree = "<group>"; };
+		F5E868F1260C4C7C00038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E86900260C4D5D00038FFA /* AmazingDelegateCommandTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandTarget.swift; sourceTree = "<group>"; };
+		F5E86904260C4E4A00038FFA /* AmazingDelegateCommandParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E868EA260C4C7C00038FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E868F2260C4C7C00038FFA /* AmazingDelegateCommand.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				F5E85AB0260AF91400038FFA /* AmazingDelegateCommand */,
+				F5E868EE260C4C7C00038FFA /* AmazingDelegateCommandTests */,
 				F5E85AAF260AF91400038FFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */,
+				F5E868ED260C4C7C00038FFA /* AmazingDelegateCommandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +81,6 @@
 		F5E85AB0260AF91400038FFA /* AmazingDelegateCommand */ = {
 			isa = PBXGroup;
 			children = (
-				F5E85AD8260AFAC000038FFA /* Extensions */,
 				F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */,
 				F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */,
 				F5E868DE260C4A4300038FFA /* AmazingDelegateCommandDelegate.swift */,
@@ -64,12 +90,15 @@
 			path = AmazingDelegateCommand;
 			sourceTree = "<group>";
 		};
-		F5E85AD8260AFAC000038FFA /* Extensions */ = {
+		F5E868EE260C4C7C00038FFA /* AmazingDelegateCommandTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */,
+				F5E868EF260C4C7C00038FFA /* AmazingDelegateCommandExecuteTests.swift */,
+				F5E86900260C4D5D00038FFA /* AmazingDelegateCommandTarget.swift */,
+				F5E86904260C4E4A00038FFA /* AmazingDelegateCommandParameter.swift */,
+				F5E868F1260C4C7C00038FFA /* Info.plist */,
 			);
-			path = Extensions;
+			path = AmazingDelegateCommandTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,17 +133,39 @@
 			productReference = F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F5E868EC260C4C7C00038FFA /* AmazingDelegateCommandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5E868F7260C4C7C00038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommandTests" */;
+			buildPhases = (
+				F5E868E9260C4C7C00038FFA /* Sources */,
+				F5E868EA260C4C7C00038FFA /* Frameworks */,
+				F5E868EB260C4C7C00038FFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5E868F4260C4C7C00038FFA /* PBXTargetDependency */,
+			);
+			name = AmazingDelegateCommandTests;
+			productName = AmazingDelegateCommandTests;
+			productReference = F5E868ED260C4C7C00038FFA /* AmazingDelegateCommandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F5E85AA5260AF91400038FFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					F5E85AAD260AF91400038FFA = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
+					};
+					F5E868EC260C4C7C00038FFA = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -132,12 +183,20 @@
 			projectRoot = "";
 			targets = (
 				F5E85AAD260AF91400038FFA /* AmazingDelegateCommand */,
+				F5E868EC260C4C7C00038FFA /* AmazingDelegateCommandTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F5E85AAC260AF91400038FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E868EB260C4C7C00038FFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,14 +210,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E85ADC260AFAC000038FFA /* AmazingDelegateCommand+Void.swift in Sources */,
 				F5E85ADB260AFAC000038FFA /* AmazingDelegateCommand.swift in Sources */,
 				F5E85ADD260AFAC000038FFA /* IAmazingDelegateCommand.swift in Sources */,
 				F5E868DF260C4A4300038FFA /* AmazingDelegateCommandDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5E868E9260C4C7C00038FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E868F0260C4C7C00038FFA /* AmazingDelegateCommandExecuteTests.swift in Sources */,
+				F5E86901260C4D5D00038FFA /* AmazingDelegateCommandTarget.swift in Sources */,
+				F5E86905260C4E4A00038FFA /* AmazingDelegateCommandParameter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5E868F4260C4C7C00038FFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = F5E85AAD260AF91400038FFA /* AmazingDelegateCommand */;
+			targetProxy = F5E868F3260C4C7C00038FFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F5E85AB4260AF91400038FFA /* Debug */ = {
@@ -338,6 +415,42 @@
 			};
 			name = Release;
 		};
+		F5E868F5260C4C7C00038FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AmazingDelegateCommandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5E868F6260C4C7C00038FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AmazingDelegateCommandTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +468,15 @@
 			buildConfigurations = (
 				F5E85AB7260AF91400038FFA /* Debug */,
 				F5E85AB8260AF91400038FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5E868F7260C4C7C00038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E868F5260C4C7C00038FFA /* Debug */,
+				F5E868F6260C4C7C00038FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

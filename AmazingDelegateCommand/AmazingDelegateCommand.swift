@@ -32,7 +32,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
     
     // MARK: - IAmazingDelegateCommand
     
-    public func execute(_ parameter: Any) {
+    public func execute(_ parameter: Any?) {
         guard let target = target else {
             return
         }
@@ -42,7 +42,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
         executeAction(target)(parameter)
     }
     
-    public func canExecute(_ parameter: Any) -> Bool {
+    public func canExecute(_ parameter: Any?) -> Bool {
         guard let target = target else {
             return false
         }
@@ -68,5 +68,18 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
     
     public func raiseCanExecuteDidChange() {
         delegate?.canExecuteDidChange()
+    }
+}
+
+public extension AmazingDelegateCommand where T == Void {
+    
+    // MARK: - Methods
+    
+    func execute() {
+        execute(())
+    }
+    
+    func canExecute() -> Bool {
+        canExecute(())
     }
 }

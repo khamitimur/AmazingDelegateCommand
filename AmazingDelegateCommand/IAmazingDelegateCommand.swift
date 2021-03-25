@@ -9,9 +9,9 @@ public protocol IAmazingDelegateCommand {
     
     // MARK: - Methods
     
-    func execute(_ parameter: Any)
+    func execute(_ parameter: Any?)
     
-    func canExecute(_ parameter: Any) -> Bool
+    func canExecute(_ parameter: Any?) -> Bool
     
     func addDelegate(_ delegate: AmazingDelegateCommandDelegate)
 }

@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-AmazingDelegateCommandExample/Pods-AmazingDelegateCommandExample-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AmazingDelegateCommand/AmazingDelegateCommand.framework
+${BUILT_PRODUCTS_DIR}/AmazingDelegateCommandCocoa/AmazingDelegateCommandCocoa.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

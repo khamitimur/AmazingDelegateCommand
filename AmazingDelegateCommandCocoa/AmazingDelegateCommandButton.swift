@@ -19,7 +19,7 @@ open class AmazingDelegateCommandButton: UIButton, AmazingDelegateCommandDelegat
         }
     }
     
-    public var commandParameter: Any = () {
+    public var commandParameter: Any? = () {
         didSet {
             canExecuteDidChange()
         }
