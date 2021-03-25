@@ -12,7 +12,6 @@
 		F5E86879260B9EAC00038FFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E86878260B9EAC00038FFA /* MainViewController.swift */; };
 		F5E8687E260B9EAE00038FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E8687D260B9EAE00038FFA /* Assets.xcassets */; };
 		F5E86881260B9EAE00038FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E8687F260B9EAE00038FFA /* LaunchScreen.storyboard */; };
-		F5E86894260BA6A200038FFA /* AmazingDelegateCommandOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E86893260BA6A200038FFA /* AmazingDelegateCommandOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		F5E8687D260B9EAE00038FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5E86880260B9EAE00038FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5E86882260B9EAE00038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5E86893260BA6A200038FFA /* AmazingDelegateCommandOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommandOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 			children = (
 				F5E86874260B9EAC00038FFA /* AppDelegate.swift */,
 				F5E86878260B9EAC00038FFA /* MainViewController.swift */,
-				F5E86893260BA6A200038FFA /* AmazingDelegateCommandOwner.swift */,
 				F5E8687D260B9EAE00038FFA /* Assets.xcassets */,
 				F5E8687F260B9EAE00038FFA /* LaunchScreen.storyboard */,
 				F5E86882260B9EAE00038FFA /* Info.plist */,
@@ -202,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5E86879260B9EAC00038FFA /* MainViewController.swift in Sources */,
-				F5E86894260BA6A200038FFA /* AmazingDelegateCommandOwner.swift in Sources */,
 				F5E86875260B9EAC00038FFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

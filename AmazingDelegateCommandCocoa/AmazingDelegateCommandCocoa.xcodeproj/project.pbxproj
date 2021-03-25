@@ -7,23 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F5E85AB3260AF91400038FFA /* AmazingDelegateCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5E85ADB260AFAC000038FFA /* AmazingDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */; };
-		F5E85ADC260AFAC000038FFA /* AmazingDelegateCommand+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */; };
-		F5E85ADD260AFAC000038FFA /* IAmazingDelegateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */; };
+		F5E868D5260C461800038FFA /* AmazingDelegateCommandCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingDelegateCommand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazingDelegateCommand.h; sourceTree = "<group>"; };
-		F5E85AB2260AF91400038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazingDelegateCommand.swift; sourceTree = "<group>"; };
-		F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AmazingDelegateCommand+Void.swift"; sourceTree = "<group>"; };
-		F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAmazingDelegateCommand.swift; sourceTree = "<group>"; };
+		F5E868D0260C461800038FFA /* AmazingDelegateCommandCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingDelegateCommandCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazingDelegateCommandCocoa.h; sourceTree = "<group>"; };
+		F5E868D4260C461800038FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F5E85AAB260AF91400038FFA /* Frameworks */ = {
+		F5E868CD260C461800038FFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,89 +27,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F5E85AA4260AF91400038FFA = {
+		F5E868C6260C461800038FFA = {
 			isa = PBXGroup;
 			children = (
-				F5E85AB0260AF91400038FFA /* AmazingDelegateCommand */,
-				F5E85AAF260AF91400038FFA /* Products */,
+				F5E868D2260C461800038FFA /* AmazingDelegateCommandCocoa */,
+				F5E868D1260C461800038FFA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F5E85AAF260AF91400038FFA /* Products */ = {
+		F5E868D1260C461800038FFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */,
+				F5E868D0260C461800038FFA /* AmazingDelegateCommandCocoa.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5E85AB0260AF91400038FFA /* AmazingDelegateCommand */ = {
+		F5E868D2260C461800038FFA /* AmazingDelegateCommandCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				F5E85AD8260AFAC000038FFA /* Extensions */,
-				F5E85ADA260AFAC000038FFA /* IAmazingDelegateCommand.swift */,
-				F5E85AD7260AFAC000038FFA /* AmazingDelegateCommand.swift */,
-				F5E85AB1260AF91400038FFA /* AmazingDelegateCommand.h */,
-				F5E85AB2260AF91400038FFA /* Info.plist */,
+				F5E868D3260C461800038FFA /* AmazingDelegateCommandCocoa.h */,
+				F5E868D4260C461800038FFA /* Info.plist */,
 			);
-			path = AmazingDelegateCommand;
-			sourceTree = "<group>";
-		};
-		F5E85AD8260AFAC000038FFA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F5E85AD9260AFAC000038FFA /* AmazingDelegateCommand+Void.swift */,
-			);
-			path = Extensions;
+			path = AmazingDelegateCommandCocoa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F5E85AA9260AF91400038FFA /* Headers */ = {
+		F5E868CB260C461800038FFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E85AB3260AF91400038FFA /* AmazingDelegateCommand.h in Headers */,
+				F5E868D5260C461800038FFA /* AmazingDelegateCommandCocoa.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F5E85AAD260AF91400038FFA /* AmazingDelegateCommand */ = {
+		F5E868CF260C461800038FFA /* AmazingDelegateCommandCocoa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5E85AB6260AF91400038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommand" */;
+			buildConfigurationList = F5E868D8260C461800038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommandCocoa" */;
 			buildPhases = (
-				F5E85AA9260AF91400038FFA /* Headers */,
-				F5E85AAA260AF91400038FFA /* Sources */,
-				F5E85AAB260AF91400038FFA /* Frameworks */,
-				F5E85AAC260AF91400038FFA /* Resources */,
+				F5E868CB260C461800038FFA /* Headers */,
+				F5E868CC260C461800038FFA /* Sources */,
+				F5E868CD260C461800038FFA /* Frameworks */,
+				F5E868CE260C461800038FFA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AmazingDelegateCommand;
-			productName = AmazingDelegateCommand;
-			productReference = F5E85AAE260AF91400038FFA /* AmazingDelegateCommand.framework */;
+			name = AmazingDelegateCommandCocoa;
+			productName = AmazingDelegateCommandCocoa;
+			productReference = F5E868D0260C461800038FFA /* AmazingDelegateCommandCocoa.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F5E85AA5260AF91400038FFA /* Project object */ = {
+		F5E868C7260C461800038FFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					F5E85AAD260AF91400038FFA = {
+					F5E868CF260C461800038FFA = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1240;
 					};
 				};
 			};
-			buildConfigurationList = F5E85AA8260AF91400038FFA /* Build configuration list for PBXProject "AmazingDelegateCommand" */;
+			buildConfigurationList = F5E868CA260C461800038FFA /* Build configuration list for PBXProject "AmazingDelegateCommandCocoa" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,18 +105,18 @@
 				en,
 				Base,
 			);
-			mainGroup = F5E85AA4260AF91400038FFA;
-			productRefGroup = F5E85AAF260AF91400038FFA /* Products */;
+			mainGroup = F5E868C6260C461800038FFA;
+			productRefGroup = F5E868D1260C461800038FFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5E85AAD260AF91400038FFA /* AmazingDelegateCommand */,
+				F5E868CF260C461800038FFA /* AmazingDelegateCommandCocoa */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F5E85AAC260AF91400038FFA /* Resources */ = {
+		F5E868CE260C461800038FFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,20 +126,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F5E85AAA260AF91400038FFA /* Sources */ = {
+		F5E868CC260C461800038FFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E85ADC260AFAC000038FFA /* AmazingDelegateCommand+Void.swift in Sources */,
-				F5E85ADB260AFAC000038FFA /* AmazingDelegateCommand.swift in Sources */,
-				F5E85ADD260AFAC000038FFA /* IAmazingDelegateCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F5E85AB4260AF91400038FFA /* Debug */ = {
+		F5E868D6260C461800038FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		F5E85AB5260AF91400038FFA /* Release */ = {
+		F5E868D7260C461800038FFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,16 +258,15 @@
 			};
 			name = Release;
 		};
-		F5E85AB7260AF91400038FFA /* Debug */ = {
+		F5E868D9260C461800038FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AmazingDelegateCommand/Info.plist;
+				INFOPLIST_FILE = AmazingDelegateCommandCocoa/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,26 +275,24 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommand;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F5E85AB8260AF91400038FFA /* Release */ = {
+		F5E868DA260C461800038FFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AmazingDelegateCommand/Info.plist;
+				INFOPLIST_FILE = AmazingDelegateCommandCocoa/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +301,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommand;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timurkhamidov.AmazingDelegateCommandCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -337,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5E85AA8260AF91400038FFA /* Build configuration list for PBXProject "AmazingDelegateCommand" */ = {
+		F5E868CA260C461800038FFA /* Build configuration list for PBXProject "AmazingDelegateCommandCocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5E85AB4260AF91400038FFA /* Debug */,
-				F5E85AB5260AF91400038FFA /* Release */,
+				F5E868D6260C461800038FFA /* Debug */,
+				F5E868D7260C461800038FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5E85AB6260AF91400038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommand" */ = {
+		F5E868D8260C461800038FFA /* Build configuration list for PBXNativeTarget "AmazingDelegateCommandCocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5E85AB7260AF91400038FFA /* Debug */,
-				F5E85AB8260AF91400038FFA /* Release */,
+				F5E868D9260C461800038FFA /* Debug */,
+				F5E868DA260C461800038FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F5E85AA5260AF91400038FFA /* Project object */;
+	rootObject = F5E868C7260C461800038FFA /* Project object */;
 }

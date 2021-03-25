@@ -52,7 +52,6 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
         }
         
         guard let parameter = parameter as? T else {
-            // Или true?
             return false
         }
         
