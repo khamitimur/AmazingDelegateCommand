@@ -1,3 +1,0 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AmazingDelegateCommand.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AmazingDelegateCommandCocoa.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework

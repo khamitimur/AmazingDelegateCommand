@@ -1,8 +1,3 @@
 # AmazingDelegateCommand
 
-TODO:
-- [ ] Add tests
-- [ ] Add canExecuteDidChange notification
-- [ ] Add sample project
-- [ ] Add UIButton integration
-- [ ] Add documentation
+A description of this package.
