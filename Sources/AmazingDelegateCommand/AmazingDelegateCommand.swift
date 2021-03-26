@@ -1,9 +1,16 @@
-//
-//  AmazingDelegateCommand.swift
-//  AmazingCommands
-//
-//  Created by t.khamidov on 23.03.2021.
-//
+import Foundation
+import AmazingWeakSequence
+
+public protocol IAmazingDelegateCommand {
+    
+    // MARK: - Methods
+    
+    func execute(_ parameter: Any?)
+    
+    func canExecute(_ parameter: Any?) -> Bool
+    
+    func addDelegate(_ delegate: AmazingDelegateCommandDelegate)
+}
 
 public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDelegateCommand {
     
@@ -18,6 +25,8 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
     
     private let executeAction: ExecuteAction
     private let canExecuteAction: CanExecuteAction?
+    
+    private let delegates = AmazingWeakSequence<AmazingDelegateCommandDelegate>()
     
     // MARK: - Initializers
     
@@ -58,16 +67,16 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
         return canExecuteAction(target)(parameter)
     }
     
-    private weak var delegate: AmazingDelegateCommandDelegate?
-    
     public func addDelegate(_ delegate: AmazingDelegateCommandDelegate) {
-        self.delegate = delegate
+        delegates.add(delegate)
     }
     
     // MARK: - Public Methods
     
     public func raiseCanExecuteDidChange() {
-        delegate?.canExecuteDidChange()
+        for delegate in delegates {
+            delegate.canExecuteDidChange()
+        }
     }
 }
 

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AmazingWeakSequence",
+        "repositoryURL": "https://github.com/khamitimur/AmazingWeakSequence",
+        "state": {
+          "branch": null,
+          "revision": "a54bbd187e84a5b018df2a0805fb7318e2d0178c",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

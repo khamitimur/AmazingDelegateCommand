@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AmazingDelegateCommand"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "Delegate command for Swift. That's it."
 
   spec.homepage     = "https://github.com/khamitimur/AmazingDelegateCommand"
@@ -10,6 +10,9 @@ Pod::Spec.new do |spec|
   spec.author    = "Timur Khamidov"
 
   spec.ios.deployment_target = "11.0"
+  spec.osx.deployment_target = "10.14"
+  spec.tvos.deployment_target = "11.0"
+  spec.watchos.deployment_target = '4.0'
 
   spec.source       = { :git => "https://github.com/khamitimur/AmazingDelegateCommand.git", :tag => "#{spec.version}" }
 
