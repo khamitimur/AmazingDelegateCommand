@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/khamitimur/AmazingWeakSequence",
-                 from: "1.0.0")
+                 .upToNextMinor(from: "1.1.0"))
     ],
     targets: [
         .target(
