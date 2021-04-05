@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AmazingDelegateCommand"
-  spec.version      = "1.1.0"
+  spec.version      = "1.2.0"
   spec.summary      = "Delegate command for Swift. That's it."
 
   spec.homepage     = "https://github.com/khamitimur/AmazingDelegateCommand"
