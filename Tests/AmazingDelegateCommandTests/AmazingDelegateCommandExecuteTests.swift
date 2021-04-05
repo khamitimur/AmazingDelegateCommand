@@ -1,10 +1,3 @@
-//
-//  AmazingDelegateCommandExecuteTests.swift
-//  AmazingDelegateCommandTests
-//
-//  Created by t.khamidov on 25.03.2021.
-//
-
 import XCTest
 
 @testable import AmazingDelegateCommand
@@ -24,65 +17,89 @@ final class AmazingDelegateCommandExecuteTests: XCTestCase {
     // MARK: - Tests
     
     func test_execute_whenValueParameter_whenValueType() throws {
+        // given
         let parameter: Int = 5
+        
         let target = AmazingDelegateCommandTarget<Int>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertTrue(target.invokedTestCommandExecute)
         XCTAssertEqual(target.invokedTestCommandExecuteParameter!, parameter)
     }
     
     func test_execute_whenValueParameter_whenOptionalValueType() throws {
+        // given
         let parameter: Int = 5
+        
         let target = AmazingDelegateCommandTarget<Int?>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertTrue(target.invokedTestCommandExecute)
         XCTAssertEqual(target.invokedTestCommandExecuteParameter!, parameter)
     }
     
     func test_execute_whenValueParameter_whenWrongValueType() throws {
+        // given
         let parameter: Int = 5
+        
         let target = AmazingDelegateCommandTarget<String>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertFalse(target.invokedTestCommandExecute)
     }
     
     func test_execute_whenValueParameter_whenWrongOptionalValueType() throws {
+        // given
         let parameter: Int = 5
+        
         let target = AmazingDelegateCommandTarget<String?>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertFalse(target.invokedTestCommandExecute)
     }
     
     func test_execute_whenOptionalValueParameter_whenValueType() throws {
+        // given
         let parameter: Int? = 5
+        
         let target = AmazingDelegateCommandTarget<Int>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertTrue(target.invokedTestCommandExecute)
         XCTAssertEqual(target.invokedTestCommandExecuteParameter!, parameter)
     }
     
     func test_execute_whenOptionalValueParameterIsNil_whenValueType() throws {
+        // given
         let parameter: Int? = nil
+        
         let target = AmazingDelegateCommandTarget<Int>()
         let command = AmazingDelegateCommand(target: target, executeAction: AmazingDelegateCommandTarget.testCommandExecute)
         
+        // when
         command.execute(parameter)
         
+        // then
         XCTAssertFalse(target.invokedTestCommandExecute)
     }
     
