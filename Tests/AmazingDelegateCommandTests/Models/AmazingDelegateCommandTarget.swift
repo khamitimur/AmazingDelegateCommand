@@ -14,10 +14,20 @@ final class AmazingDelegateCommandTarget<T> {
     var invokedTestCommandExecute = false
     var invokedTestCommandExecuteParameter: T?
     
+    var invokedTestCommandCanExecute = false
+    var invokedTestCommandCanExecuteParameter: T?
+    
     // MARK: - Methods
     
     func testCommandExecute(_ parameter: T) {
         invokedTestCommandExecute = true
         invokedTestCommandExecuteParameter = parameter
+    }
+    
+    func testCommandCanExecute(_ parameter: T) -> Bool {
+        invokedTestCommandCanExecute = true
+        invokedTestCommandCanExecuteParameter = parameter
+        
+        return true
     }
 }
