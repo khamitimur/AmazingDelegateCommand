@@ -12,12 +12,12 @@ public protocol IAmazingDelegateCommand {
     func addDelegate(_ delegate: AmazingDelegateCommandDelegate)
 }
 
-public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDelegateCommand {
+public final class AmazingDelegateCommand<Target: AnyObject, Parameter: Any>: IAmazingDelegateCommand {
     
     // MARK: - Type Aliases
     
-    public typealias ExecuteAction = (Target) -> (T) -> Void
-    public typealias CanExecuteAction = (Target) -> (T) -> Bool
+    public typealias ExecuteAction = (Target) -> (Parameter) -> Void
+    public typealias CanExecuteAction = (Target) -> (Parameter) -> Bool
     
     // MARK: - Private Properties
     
@@ -46,7 +46,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
             return
         }
         
-        guard let parameter = parameter as? T else { return }
+        guard let parameter = parameter as? Parameter else { return }
         
         executeAction(target)(parameter)
     }
@@ -60,7 +60,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
             return true
         }
         
-        guard let parameter = parameter as? T else {
+        guard let parameter = parameter as? Parameter else {
             return false
         }
         
@@ -80,7 +80,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, T: Any>: IAmazingDe
     }
 }
 
-public extension AmazingDelegateCommand where T == Void {
+public extension AmazingDelegateCommand where Parameter == Void {
     
     // MARK: - Methods
     
