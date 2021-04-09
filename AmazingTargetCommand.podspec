@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "AmazingDelegateCommand"
-  spec.version      = "1.2.1"
-  spec.summary      = "Delegate command for Swift. That's it."
+  spec.name         = "AmazingTargetCommand"
+  spec.version      = "1.0.0"
+  spec.summary      = "When command pattern meets target-action pattern."
 
-  spec.homepage     = "https://github.com/khamitimur/AmazingDelegateCommand"
+  spec.homepage     = "https://github.com/khamitimur/AmazingTargetCommand"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   spec.author    = "Timur Khamidov"
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target = "11.0"
   spec.watchos.deployment_target = '4.0'
 
-  spec.source       = { :git => "https://github.com/khamitimur/AmazingDelegateCommand.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/khamitimur/AmazingTargetCommand.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "Sources/**/*.swift"
   

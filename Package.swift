@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AmazingDelegateCommand",
+    name: "AmazingTargetCommand",
     platforms: [
         .macOS(.v10_14),
         .iOS(.v11),
@@ -12,8 +12,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "AmazingDelegateCommand",
-            targets: ["AmazingDelegateCommand"]),
+            name: "AmazingTargetCommand",
+            targets: ["AmazingTargetCommand"]),
     ],
     dependencies: [
         .package(url: "https://github.com/khamitimur/AmazingWeakSequence",
@@ -21,14 +21,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AmazingDelegateCommand",
+            name: "AmazingTargetCommand",
             dependencies: [
                 "AmazingWeakSequence"
             ]),
         .testTarget(
-            name: "AmazingDelegateCommandTests",
+            name: "AmazingTargetCommandTests",
             dependencies: [
-                "AmazingDelegateCommand"
+                "AmazingTargetCommand"
             ]),
     ]
 )

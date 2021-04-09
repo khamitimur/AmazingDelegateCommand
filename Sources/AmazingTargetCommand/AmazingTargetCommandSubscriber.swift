@@ -1,4 +1,5 @@
-public protocol AmazingDelegateCommandDelegate: AnyObject {
+/// Subscriber to [AmazingTargetCommand](x-source-tag://amazingTargetCommandProtocol) notifications.
+public protocol AmazingTargetCommandSubscriber: AnyObject {
     
     // MARK: - Methods
     

@@ -1,47 +1,51 @@
 import Foundation
 import AmazingWeakSequence
 
-public protocol IAmazingDelegateCommand {
+/// Command which execution is handled by a target.
+/// - Tag: amazingTargetCommandProtocol
+public protocol IAmazingTargetCommand {
     
     // MARK: - Methods
     
-    /// Executes command.
+    /// Executes the command.
+    /// - Parameter parameter: A parameter to pass to the `execute` action.
     func execute(_ parameter: Any?)
     
-    /// Returns a value that indicates whether the command can be executed with provided parameter.
+    /// Returns a value that indicates whether the command can be executed with a provided parameter.
+    /// - Parameter parameter: A parameter to pass to the `canExecute` action.
     func canExecute(_ parameter: Any?) -> Bool
     
-    /// Adds delegate.
-    func addDelegate(_ delegate: AmazingDelegateCommandDelegate)
+    /// Subscribes to the command notifications.
+    func subscribe(_ subscriber: AmazingTargetCommandSubscriber)
 }
 
-public final class AmazingDelegateCommand<Target: AnyObject, Parameter: Any>: IAmazingDelegateCommand {
+/// Command which execution is handled by a target.
+public final class AmazingTargetCommand<Target: AnyObject, Parameter: Any>: IAmazingTargetCommand {
     
     // MARK: - Type Aliases
     
-    /// Action to be executed.
+    /// Action that executes the command.
     public typealias ExecuteAction = (Target) -> (Parameter) -> Void
     
-    /// Action that return a value that indicates whether the command can be executed with provided parameter.
+    /// Action that returns a value that indicates whether the command can be executed with a provided parameter.
     public typealias CanExecuteAction = (Target) -> (Parameter) -> Bool
     
     // MARK: - Private Properties
     
-    /// Returns object that owns action to be execute.
     private weak var target: Target?
     
     private let executeAction: ExecuteAction
     private let canExecuteAction: CanExecuteAction?
     
-    private let delegates = AmazingWeakSequence<AmazingDelegateCommandDelegate>()
+    private let subscribers = AmazingWeakSequence<AmazingTargetCommandSubscriber>()
     
     // MARK: - Initializers
     
     /// Initializes a new instance.
     /// - Parameters:
-    ///   - target: Object that owns action to be execute.
-    ///   - executeAction: Action to be executed.
-    ///   - canExecuteAction: Action that return a value that indicates whether the command can be executed with provided parameter.
+    ///   - target: Target that owns actions.
+    ///   - executeAction: Action that executes the command.
+    ///   - canExecuteAction: Action that returns a value that indicates whether the command can be executed with a provided parameter.
     public init(target: Target,
                 executeAction: @escaping ExecuteAction,
                 canExecuteAction: CanExecuteAction? = nil) {
@@ -51,7 +55,7 @@ public final class AmazingDelegateCommand<Target: AnyObject, Parameter: Any>: IA
         self.canExecuteAction = canExecuteAction
     }
     
-    // MARK: - IAmazingDelegateCommand
+    // MARK: - IAmazingTargetCommand
     
     public func execute(_ parameter: Any?) {
         guard let target = target else {
@@ -79,25 +83,25 @@ public final class AmazingDelegateCommand<Target: AnyObject, Parameter: Any>: IA
         return canExecuteAction(target)(parameter)
     }
     
-    public func addDelegate(_ delegate: AmazingDelegateCommandDelegate) {
-        delegates.add(delegate)
+    public func subscribe(_ subscriber: AmazingTargetCommandSubscriber) {
+        subscribers.add(subscriber)
     }
     
     // MARK: - Public Methods
     
-    /// Raises [canExecuteDidChange](x-source-tag://canExecuteDidChange) method of each delegate.
+    /// Raises [canExecuteDidChange](x-source-tag://canExecuteDidChange) method of each subscriber.
     public func raiseCanExecuteDidChange() {
-        for delegate in delegates {
-            delegate.canExecuteDidChange()
+        for subscriber in subscribers {
+            subscriber.canExecuteDidChange()
         }
     }
 }
 
-public extension AmazingDelegateCommand where Parameter == Void {
+public extension AmazingTargetCommand where Parameter == Void {
     
     // MARK: - Methods
     
-    /// Executes command.
+    /// Executes the command.
     func execute() {
         execute(())
     }

@@ -1,11 +1,4 @@
-//
-//  AmazingDelegateCommandParameter.swift
-//  AmazingDelegateCommandTests
-//
-//  Created by t.khamidov on 25.03.2021.
-//
-
-final class AmazingDelegateCommandParameter {
+final class AmazingTargetCommandParameter {
     
     // MARK: - Properties
     
@@ -18,7 +11,7 @@ final class AmazingDelegateCommandParameter {
     }
 }
 
-final class AnotherAmazingDelegateCommandParameter {
+final class AnotherAmazingTargetCommandParameter {
     
     // MARK: - Properties
     
