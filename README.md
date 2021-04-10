@@ -1,10 +1,55 @@
 # AmazingTargetCommand
 
-`AmazingTargetCommand` is a spin on classic [`Command`](https://en.wikipedia.org/wiki/Command_pattern) design pattern with a Swift version of [`Target-Action`](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) design pattern on top. Together they will enable you to create commands with ease, without unnecessary repetition and no chance of creating any retencion cycle.
+`AmazingTargetCommand` is a spin on classic [`Command`](https://en.wikipedia.org/wiki/Command_pattern) design pattern with a Swift version of [`Target-Action`](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) design pattern on top. Together they will enable you to create commands with ease, without unnecessary repetition and no chances of accidentally creating a retencion cycle.
 
-## The problem
+## Why?
 
-Let's say that you have `Command` pattern already applied in your programm. And it works fine for global commands like `Edit` and `Save`. But now you want to create a command specific to one of `View Models`. `Archive` command, for example. What do you do? You create a class that implements your command protocol. And here is where the problem arise. You just created a separate class for a command that is tightly coupled with one of your `View Models`.
+Let's say that you are developing financial application and you have `Command` pattern already applied. And it works fine for global commands like `Transfer` and `Deposit`. But now you want to create a command, for example, `Export` that is specific to one of the application's screens. What do you do? You create a class that implements your command protocol. And here is where the problem arise. You just created a separate class for a command that is tightly coupled with one of many screens in the application. That's where `AmazingTargetCommand` comes to rescue.
+
+## Usage
+
+Most of the time you'll only need to provide `Execute` and `CanExecute` actions.
+
+```swift
+import AmazingTargetCommand
+
+class ExportViewModel {
+    
+    var exportCommand: AmazingTargetCommand<ExportViewModel, IndexPath>!
+    
+    init() {
+        exportCommand = AmazingTargetCommand(target: self,
+                                             executeAction: ExportViewModel.export,
+                                             canExecuteAction: ExportViewModel.canExport)
+    }
+    
+    func export(_ parameter: IndexPath) {
+        // ...
+    }
+    
+    func canExport(_ parameter: IndexPath) -> Bool {
+        let canExport = true
+        
+        // ...
+        
+        return canExport
+    }
+}
+
+
+class ExportViewController: UIViewController, UITableViewDelegate {
+    
+    let viewModel = ExportViewModel()
+    
+    // ...
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.exportCommand.execute(indexPath)
+    }
+    
+    // ...
+}
+```
 
 ## Requirements
 
@@ -38,5 +83,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-* Any similarity with the [`DelegateCommand`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.platformui.delegatecommand) is deliberate 🙂
+* Any similarities with the [`DelegateCommand`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.platformui.delegatecommand) are deliberate 🙂
 * Implemenation of `Target-Action` design pattern in Swift was inspired by [the article](https://oleb.net/blog/2014/07/swift-instance-methods-curried-functions/) by [Ole Begemann](https://oleb.net/).
