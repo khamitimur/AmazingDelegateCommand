@@ -4,7 +4,7 @@
 
 ## Why?
 
-Let's say that you are developing financial application and you have `Command` pattern already applied. And it works fine for global commands like `Transfer` and `Deposit`. But now you want to create a command, for example, `Export` that is specific to one of the application's screens. What do you do? You create a class that implements your command protocol. And here is where the problem arise. You just created a separate class for a command that is tightly coupled with one of many screens in the application. That's where `AmazingTargetCommand` comes to rescue.
+Let's say that you are developing financial application and you have `Command` pattern already applied. And it works fine for global commands like `Transfer` and `Deposit`. But now you want to create a command `Export` that is specific to one of the application's screens. What do you do? You create a class that implements your command protocol. And here is where the problem arise. You just created a separate class for a command that is tightly coupled with one of many screens in the application. That's where `AmazingTargetCommand` comes to rescue.
 
 ## Usage
 
