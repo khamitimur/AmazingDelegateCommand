@@ -8,8 +8,6 @@ Let's say that you are developing financial application and you have `Command` p
 
 ## Usage
 
-Most of the time you'll only need to provide `Execute` and `CanExecute` actions.
-
 ```swift
 import AmazingTargetCommand
 
