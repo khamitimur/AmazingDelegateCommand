@@ -1,6 +1,9 @@
 import Foundation
 import AmazingWeakSequence
 
+public typealias ITargetCommand = IAmazingTargetCommand
+public typealias TargetCommand = AmazingTargetCommand
+
 /// Command which execution is handled by a target.
 /// - Tag: amazingTargetCommandProtocol
 public protocol IAmazingTargetCommand {
