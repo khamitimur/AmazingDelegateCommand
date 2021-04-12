@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AmazingTargetCommand"
-  spec.version      = "1.0.0"
-  spec.summary      = "Spin on classic Command design pattern with a Swift version of Target-Action design pattern on top."
+  spec.version      = "1.0.1"
+  spec.summary      = "A spin on classic Command design pattern with a Swift version of Target-Action design pattern on top."
 
   spec.homepage     = "https://github.com/khamitimur/AmazingTargetCommand"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
