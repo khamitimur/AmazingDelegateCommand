@@ -49,7 +49,7 @@ class ExportViewController: UIViewController, UITableViewDelegate {
 }
 ```
 
-Check out [`AmazingTargetCommandButton`](https://github.com/khamitimur/AmazingTargetCommandCocoa/blob/master/Sources/AmazingTargetCommandCocoa/UIKit/AmazingTargetCommandButton.swift) for `AmazingTargetCommandSubscriber` usage example.
+Check out [`AmazingTargetCommandButton`](https://github.com/khamitimur/AmazingTargetCommandCocoa/blob/master/Sources/AmazingTargetCommandCocoa/UIKit/AmazingTargetCommandButton.swift) for more applicable usage example.
 
 ## Requirements
 
