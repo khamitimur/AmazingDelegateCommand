@@ -81,5 +81,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-* Any similarities with the [`DelegateCommand`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.platformui.delegatecommand) are deliberate 🙂
+* Any similarities with the [`DelegateCommand`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.platformui.delegatecommand) are deliberate.
 * Implemenation of [`Target-Action`](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) design pattern in Swift was inspired by [the article](https://oleb.net/blog/2014/07/swift-instance-methods-curried-functions/) by [Ole Begemann](https://oleb.net/).
